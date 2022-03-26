@@ -12,7 +12,7 @@ const home = require("./src/routes/home"); //현재 폴더에서 라우츠 폴�
 //앱세팅
 app.set("views","./src/views");
 app.set("view engine", "ejs");
-app.use(express.static(`${__dirname}/src/public`));
+app.use(express.static(`${__dirname}/src/public`));//app.js파일이있는 위치 정적경로로 추가
 
 app.use("/", home); // use는 미들웨어를 등록해주는 메서드 //루트경로로오면 홈으로 보내줌
 
