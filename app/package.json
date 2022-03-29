@@ -19,6 +19,7 @@
     "url": ""
   },
   "dependencies": {
+    "body-parser": "^1.19.2",
     "nano": "^10.0.0"
   }
 }

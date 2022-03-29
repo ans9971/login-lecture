@@ -21,6 +21,18 @@ function login(){
             "Content-Type":"application/json",
         },
         body : JSON.stringify(req),
+        //서버에서 응답한 데이터를 받으려면 then메서드를 사용해서 데이터 가져올수잇음
+        // res 파라미터로 전달됨
+    }).then((res)=> res.json()).then((res)=>{
+        if(res.success){
+            location.href="/";
+            
+        }else{
+            alert(res.msg);
+        }
     })
+    .catch((err)=>{
+        console.error(new Error("로그인중에러발생"));
+    });
 }
  
